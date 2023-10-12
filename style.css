@@ -195,18 +195,16 @@ strong{
     justify-content: center;
     position: relative;
 }
-.section__three__svg__line{
+#section__three__image__container {
+    border: 2px solid red;
+}
+#section__three__image__container img{
     position: absolute;
-    bottom: 300px;
+    bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    opacity: 0;
+    max-height: 80%;
 }
-.section__three__text__container{
-    border: 2px solid white;
-    position: absolute;
-    color: white;
-    left: 52%;
-    bottom: 65%;
-    opacity: 0;
+#section__three__image__container img:not(:first-child){
+    display: none;
 }

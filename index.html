@@ -69,10 +69,9 @@
         </section>
 
         <section id="ship__section__three">
-            <video id="section__three__video">
-                <source src="/media/video/discover_ship.mp4" type="video/mp4">
-            </video>
-            <svg width="12" height="656" viewBox="0 0 12 656" fill="none" xmlns="http://www.w3.org/2000/svg" class="section__three__svg__line">
+            <div id="section__three__image__container">
+            </div>
+            <!-- <svg width="12" height="656" viewBox="0 0 12 656" fill="none" xmlns="http://www.w3.org/2000/svg" class="section__three__svg__line">
                 <path d="M0.666667 6C0.666666 8.94552 3.05448 11.3333 6 11.3333C8.94552 11.3333 11.3333 8.94552 11.3333 6C11.3333 3.05448 8.94552 0.666667 6 0.666667C3.05448 0.666666 0.666667 3.05448 0.666667 6ZM0.666638 650C0.666638 652.945 3.05445 655.333 5.99997 655.333C8.94549 655.333 11.3333 652.945 11.3333 650C11.3333 647.054 8.94549 644.667 5.99997 644.667C3.05445 644.667 0.666638 647.054 0.666638 650ZM5 6L4.99997 650L6.99997 650L7 6L5 6Z" fill="white" fill-opacity="0.38"/>
             </svg>
             <div class="section__three__text__container">
@@ -86,7 +85,7 @@
                     <span>fuerza y belleza en cada veta</span>
                     <p>cuadernas, largueros, listones longitudinales interiores, peana </p>
                 </div>
-            </div>
+            </div> -->
         </section>
 
     </main>
@@ -175,27 +174,9 @@
 
         //SECTION THREE
         const shipSectionThree = document.querySelector('#ship__section__three')
-        const video = document.getElementById('section__three__video')
+        const shipImages = document.querySelectorAll('#section__three__ship__frame')
 
-        const videoDuration = 40;
-        const videoStop = [10, 20, 30];
-
-        // ScrollTrigger.create({
-        //     trigger: shipSectionThree,
-        //     start: 'top top',
-        //     end: '+=100%',
-        //     pin: true,
-        //     scrub: true,
-        //     onUpdate: self => {
-        //         const videoTime = self.progress * videoDuration
-
-        //         for(let i = 0; i < videoStop.length; i++){
-        //             if(Math.abs(videoDuration - videoStop[i]) < 0.5){
-        //                 video.pause();
-        //             }
-        //         }
-        //     }
-        // })
+        console.log(shipImages);
 
         const timeline3 = gsap.timeline({
             scrollTrigger: {
@@ -204,31 +185,15 @@
                 markers: true,
                 pin: true,
                 scrub: true,
-                end: '+=' + (shipSectionThree.offsetHeight * 5)
+                end: '+=' + (shipSectionThree.offsetHeight * 10)
             }
         })
-        .to(video, {currentTime: videoDuration})
-        // .to('.section__three__svg__line', {})
 
-        // .to('.section__three__svg__line', {opacity: 1, duration: 1})
-        // .to('.section__three__text__container', {opacity: 1, duration: 1})
-
-        // .to('.section__three__text__container', {opacity: 0, duration: 1})
-        // .to('.section__three__svg__line', {opacity: 0, duration: 1})
-
-        // .to('.section__three__svg__line', {display: 'none', duration: 1})
-        // .to('.section__three__text__container', {display: 'none', duration: 1})
-        
-        // const timelineVideo = gsap.timeline({
-        //     scrollTrigger: {
-        //         trigger: shipSectionThree,
-        //         start: 'top top',
-        //         markers: true,
-        //         pin: true,
-        //         scrub: true,
-        //         end: '+=' + (shipSectionThree.offsetHeight * 15)
-        //     }
-        // })
+        shipImages.forEach((image, index) => {
+            if(index > 1){
+                timeline3.to(image, {display: 'block', ease: 'none'})
+            }
+        })
 
 
     </script>

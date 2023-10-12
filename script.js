@@ -24,3 +24,34 @@ for (let i = 1; i <= numImagenes; i++) {
     // Agrega la imagen al elemento div de la galería
     galeriaDiv.appendChild(imagen);
 }
+
+
+
+// Obtén una referencia al elemento div donde se mostrarán las imágenes
+const divContainer = document.getElementById("section__three__image__container");
+
+// Ruta base de las imágenes (ajusta esto según tu estructura de carpetas)
+const rutaImg = '/media/shipFrametime/';
+
+// Número total de imágenes que deseas cargar
+const totalImages = 594;
+
+// Bucle para cargar y mostrar las imágenes
+for (let i = 1; i <= totalImages; i++) {
+    // Crea un elemento de imagen
+    const imagen = document.createElement("img");
+    
+    imagen.id = `section__three__ship__frame`;
+    imagen.className = `section__three__ship__frame__num${i}`
+    
+    // Establece la ruta de la imagen
+    const rutaImagen = `${rutaImg}${i}.webp`; // Cambia la extensión según el tipo de imagen que tengas
+
+    // Establece el atributo "src" de la imagen con la ruta
+    imagen.src = rutaImagen;
+    
+    // Agrega la imagen al elemento div de la galería
+    divContainer.appendChild(imagen);
+}
+
+
