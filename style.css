@@ -184,3 +184,29 @@ strong{
 #section__two__image__container img:not(:first-child){
     display: none;
 }
+
+/* ----------------SECTION THREE----------------- */
+#ship__section__three{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
+}
+.section__three__svg__line{
+    position: absolute;
+    bottom: 300px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+}
+.section__three__text__container{
+    border: 2px solid white;
+    position: absolute;
+    color: white;
+    left: 52%;
+    bottom: 65%;
+    opacity: 0;
+}
