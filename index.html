@@ -167,20 +167,18 @@
         .to('.section__two__frame__num1', {})
 
         images.forEach((image, index) => {
-            if(index > 1){
-                timeline2.to(image, {display: 'block', ease: 'none'}, `+=${index}`)
-                if(index > 2){
-                    timeline2.to(images[index - 1], {display: 'none', ease: 'none'}, `+=${index}`);
-                }
-                        
+            if(index > 2){
+                timeline2.to(image, {display: 'block', ease: 'none'})
+                timeline2.to(images[index - 1], {display: 'none', ease: 'none'})
+            }
+            else{
+                timeline2.to(image, {display: 'block', ease: 'none'})
             }
         })
 
         //SECTION THREE
         const shipSectionThree = document.querySelector('#ship__section__three')
         const shipImages = document.querySelectorAll('#section__three__ship__frame')
-
-        console.log(shipImages);
 
         const timeline3 = gsap.timeline({
             scrollTrigger: {
