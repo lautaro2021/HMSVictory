@@ -168,7 +168,11 @@
 
         images.forEach((image, index) => {
             if(index > 1){
-                timeline2.to(image, {display: 'block', ease: 'none'})
+                timeline2.to(image, {display: 'block', ease: 'none'}, `+=${index}`)
+                if(index > 2){
+                    timeline2.to(images[index - 1], {display: 'none', ease: 'none'}, `+=${index}`);
+                }
+                        
             }
         })
 
@@ -191,9 +195,10 @@
 
         shipImages.forEach((image, index) => {
             if(index > 1){
-                timeline3.to(image, {display: 'block', ease: 'none'})
+                timeline3.to(image, {display: 'block', ease: 'none'}, `+=${index}`)
+                        .to(shipImages[index - 1], {display: 'none', ease: 'none'}, `+=${index}`);
             }
-        })
+        });
 
 
     </script>
