@@ -191,12 +191,9 @@ strong{
     height: 100%;
     background-color: black;
     display: flex;
-    align-items: flex-end;
+    align-items: flex-start;
     justify-content: center;
     position: relative;
-}
-#section__three__image__container {
-    border: 2px solid red;
 }
 #section__three__image__container img{
     position: absolute;
@@ -207,4 +204,87 @@ strong{
 }
 #section__three__image__container img:not(:first-child){
     display: none;
+}
+.section__three__header{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 26px;
+}
+.section__three__header strong{
+    display: block;
+    font-size: 45px;
+}
+.section__three__text__one {
+    color: white;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translateY(-50%);
+    display: none;
+    opacity: 0;
+}
+.section__three__text__one div{
+    margin-left: 25px;  
+}
+.section__three__text h2{
+    font-size: 24px;
+    font-weight: var(--font--weight-bold);
+}
+.section__three__text strong{
+    font-size: 35px;
+    font-weight: var(--font--weight-normal);
+    line-height: 60px;
+}
+.section__three__text p {
+    font-size: 24px;
+    font-weight: var(--font--weight-normal);
+    max-width: 35ch;
+    text-align: left;
+}
+.section__three__text__two{
+    position: absolute;
+    color: white;
+    display: flex;
+    align-items: flex-end;
+    bottom: 8%;
+    left: 62%;
+    transform: translateX(-50%);
+    display: none;
+    opacity: 0;
+}
+.section__three__text__two div{
+    margin-left: 25px;
+}
+.section__three__text__three{
+    position: absolute;
+    color: white;
+    display: none;
+    opacity: 0;
+    top:50%;
+    left: 62%;
+    transform: translate(-50%, -50%);
+}
+.section__three__text__three div{
+    margin-left: 25px;
+}
+.section__three__text__four{
+    opacity: 0;
+    display: none;
+    position: absolute;
+    top: 60%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    color: white;
+
+}
+.section__three__text__four img{
+    height: 15px;
+    width: 500px;
+}
+.section__three__text__four div{
+    margin-left: 25px;
 }
