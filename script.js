@@ -2,10 +2,10 @@
 const galeriaDiv = document.getElementById("section__two__image__container");
 
 // Ruta base de las imágenes (ajusta esto según tu estructura de carpetas)
-const rutaBase = '/media/ship/';
+const rutaBase = '/media/sectionTwo/360Ship/';
 
 // Número total de imágenes que deseas cargar
-const numImagenes = 48;
+const numImagenes = 49;
 
 // Bucle para cargar y mostrar las imágenes
 for (let i = 0; i <= numImagenes; i++) {
@@ -32,7 +32,7 @@ const divContainer = document.getElementById("section__1");
 //PART 1
 
 
-const rutaImgPartOne = '/media/section1/';
+const rutaImgPartOne = '/media/sectionThree/frameOne/';
 
 const totalImagesPartOne = 119;
 
@@ -51,7 +51,7 @@ for (let i = 1; i <= totalImagesPartOne; i++) {
 
 //PART 2
 
-const rutaImgPartTwo = '/media/section2/';
+const rutaImgPartTwo = '/media/sectionThree/frameTwo/';
 
 const totalImagesPartTwo = 120;
 
@@ -70,7 +70,7 @@ for (let i = 0; i <= totalImagesPartTwo; i++) {
 
 //PART 3
 
-const rutaImgPartThree = '/media/section3/';
+const rutaImgPartThree = '/media/sectionThree/frameThree/';
 
 const totalImagesPartThree = 122;
 
@@ -89,7 +89,7 @@ for (let i = 0; i <= totalImagesPartThree; i++) {
 
 //PART 4
 
-const rutaImgPartFour = '/media/section4/';
+const rutaImgPartFour = '/media/sectionThree/frameFour/';
 
 const totalImagesPartFour = 130;
 
@@ -108,9 +108,9 @@ for (let i = 0; i <= totalImagesPartFour; i++) {
 
 //PART 4
 
-const rutaImgPartFive = '/media/section5/';
+const rutaImgPartFive = '/media/sectionThree/frameFive/';
 
-const totalImagesPartFive = 94;
+const totalImagesPartFive = 119;
 
 for (let i = 0; i <= totalImagesPartFive; i++) {
 
