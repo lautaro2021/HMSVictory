@@ -5,10 +5,10 @@ const galeriaDiv = document.getElementById("section__two__image__container");
 const rutaBase = '/media/ship/';
 
 // Número total de imágenes que deseas cargar
-const numImagenes = 49;
+const numImagenes = 48;
 
 // Bucle para cargar y mostrar las imágenes
-for (let i = 1; i <= numImagenes; i++) {
+for (let i = 0; i <= numImagenes; i++) {
     // Crea un elemento de imagen
     const imagen = document.createElement("img");
     
